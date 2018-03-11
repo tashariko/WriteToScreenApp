@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/resetButton"
+        android:text="reset"
+        android:layout_alignParentBottom="true"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/topButtonView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/sizeMinusButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="A-" />
+
+        <Button
+            android:id="@+id/sizePlusButton"
+            android:text="A+"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+
+        <Button
+            android:id="@+id/colorButton"
+            android:text="Color"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+
+        <Button
+            android:id="@+id/undoButton"
+            android:text="undo"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <tashariko.com.writetoscreenapp.CustomCanvasForDraw
+        android:id="@+id/customCanvas"
+        android:layout_below="@id/topButtonView"
+        android:layout_above="@id/resetButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>
